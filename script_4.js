@@ -20,7 +20,9 @@ const entrepreneurs = [
   { first: 'Peter', last: 'Thiel', year: 1967 }
 ];
 
+
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
 
 // Question 1: 
 console.log("Q1: Filtre dans cette liste les entrepreneurs qui sont nés dans les années 70");
@@ -31,7 +33,16 @@ entrepreneurs.forEach( entrepreneur => {
   }
 });
 
+
+// Autre technique (je pense qu'en réalité c'est plutot ça qui était demandé que la technique d'au-dessus)
+let bornInThe70s = entrepreneurs.filter(
+  (item) => item.year > 1970 && item.year < 1980
+);
+console.log(bornInThe70s);
+
+
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
 
 // Question 2: 
 console.log("Q2: Sors une array qui contient le prénom et le nom des entrepreneurs");
@@ -40,7 +51,9 @@ entrepreneurs.forEach( entrepreneur => {
   console.log (`Nom : ${entrepreneur.first} ${entrepreneur.last}`);
 });
 
+
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
 
 // Question 3: 
 console.log("Q3: Quel âge aurait chaque inventeur aujourd'hui ?");
@@ -49,7 +62,9 @@ entrepreneurs.forEach( entrepreneur =>{
   console.log(`${entrepreneur.first} ${entrepreneur.last} : ${2022 - entrepreneur.year} ans`)
 });
 
+
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
 
 // Question 4: 
 console.log("Q4: Trie les entrepreneurs par ordre alphabétique du nom de famille");
