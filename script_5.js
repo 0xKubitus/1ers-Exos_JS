@@ -22,13 +22,13 @@ console.log("Q1: Est-ce que tous les livres ont été au moins empruntés une fo
 
 arr_new_list = []
 
-for(let i = 0; i < books.length; i++) { // <= on itère sur chaque livre de l'array de l'énoncé
+for(let i = 0; i < books.length; i++) { // <= on itère sur chaque livre de l'array de l'énoncé.
   if(books[i].rented === 0) {
-    arr_new_list.push(books[i].title) // on met dans un nouvel array tous les livres n'ayant jamais été loués (aucun)
+    arr_new_list.push(books[i].title) // on met dans un nouvel array tous les livres n'ayant jamais été loués.
   }
 }
 
-let not_rented = arr_new_list.length // on mesure le nbre d'éléments dans le nouvel array
+let not_rented = arr_new_list.length // on mesure le nbre d'éléments dans le nouvel array.
 
 console.log(not_rented + " livres n'ont pas été empruntés.") // on affiche le résultat dans la console avec une phrase.
 console.log("* ".repeat(35))
@@ -39,12 +39,11 @@ console.log("* ".repeat(35))
 // Question 2: 
 console.log("Q2: Quel est livre le plus emprunté ?")
 
-books.sort((a, b) => { // on utilise '.sort' pour trier les objets au sein de l'array
-  return b.rented - a.rented; // ici faire 'b - a' permet de trier dans l'ordre décroissant ('a.rented - b.rented' -> tri ordre croissant)
+books.sort((a, b) => { // on utilise '.sort' pour trier les objets au sein de l'array.
+  return b.rented - a.rented; // ici, faire 'b - a' permet de trier dans l'ordre décroissant.
 });
 
-
-console.log(`le livre le plus emprunté est celui avec l'ID: ${books[0].id}`);
+console.log(`le livre le plus emprunté est celui avec l'ID: ${books[0].id}`); // attention à bien utiliser le genre d'apostrophe via 'AltGr + 7' !!!
 
 console.log("* ".repeat(35));
 
@@ -55,7 +54,11 @@ console.log("* ".repeat(35));
 // Question 3:
 console.log("Q3: Quel est livre le moins emprunté ?")
 
+books.sort((a, b) => { // on utilise '.sort' pour trier les objets au sein de l'array.
+  return a.rented - b.rented; // 'a.rented - b.rented' -> tri ordre croissant.
+});
 
+console.log(`le livre le moins emprunté est celui avec l'ID: ${books[0].id}`); // attention à bien utiliser le genre d'apostrophe via 'AltGr + 7' !!!
 
 console.log("* ".repeat(35))
 

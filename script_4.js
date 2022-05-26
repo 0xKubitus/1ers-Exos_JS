@@ -63,7 +63,7 @@ entrepreneurs.forEach( entrepreneur => {
 console.log("Q3: Quel âge aurait chaque inventeur aujourd'hui ?");
 
 entrepreneurs.forEach( entrepreneur =>{
-  console.log(`${entrepreneur.first} ${entrepreneur.last} : ${2022 - entrepreneur.year} ans`)
+  console.log(`${entrepreneur.first} ${entrepreneur.last} : ${2022 - entrepreneur.year} ans`) // attention à bien utiliser le genre d'apostrophe via 'AltGr + 7' !!!
 });
 
 console.log("* ".repeat(35))
@@ -78,7 +78,7 @@ console.log("Q4: Trie les entrepreneurs par ordre alphabétique du nom de famill
 let arrayNames = []
 
 entrepreneurs.forEach( entrepreneur =>{
-    arrayNames.push(`${entrepreneur.last} ${entrepreneur.first}`)
+    arrayNames.push(`${entrepreneur.last} ${entrepreneur.first}`) // attention à bien utiliser le genre d'apostrophe via 'AltGr + 7' !!!
 });
 
 arrayNames.sort().forEach( name =>{// J'utilise la fonction sort() pour trier par ordre alphabétique
