@@ -39,9 +39,14 @@ console.log("* ".repeat(35))
 // Question 2: 
 console.log("Q2: Quel est livre le plus emprunté ?")
 
+books.sort((a, b) => { // on utilise '.sort' pour trier les objets au sein de l'array
+  return b.rented - a.rented; // ici faire 'b - a' permet de trier dans l'ordre décroissant ('a.rented - b.rented' -> tri ordre croissant)
+});
 
 
-console.log("* ".repeat(35))
+console.log(`le livre le plus emprunté est celui avec l'ID: ${books[0].id}`);
+
+console.log("* ".repeat(35));
 
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
