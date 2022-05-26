@@ -33,12 +33,16 @@ entrepreneurs.forEach( entrepreneur => {
   }
 });
 
+console.log("* ".repeat(35))
+
 
 // Autre technique (je pense qu'en réalité c'est plutot ça qui était demandé que la technique d'au-dessus)
 let bornInThe70s = entrepreneurs.filter(
   (item) => item.year > 1970 && item.year < 1980
 );
 console.log(bornInThe70s);
+
+console.log("* ".repeat(35))
 
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -62,6 +66,8 @@ entrepreneurs.forEach( entrepreneur =>{
   console.log(`${entrepreneur.first} ${entrepreneur.last} : ${2022 - entrepreneur.year} ans`)
 });
 
+console.log("* ".repeat(35))
+
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
@@ -78,3 +84,5 @@ entrepreneurs.forEach( entrepreneur =>{
 arrayNames.sort().forEach( name =>{// J'utilise la fonction sort() pour trier par ordre alphabétique
   console.log(name);  
 })
+
+console.log("* ".repeat(35))
