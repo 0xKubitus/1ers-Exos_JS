@@ -28,7 +28,7 @@ const entrepreneurs = [
 console.log("Q1: Filtre dans cette liste les entrepreneurs qui sont nés dans les années 70");
 
 entrepreneurs.forEach( entrepreneur => {
-  if(entrepreneur.year >= 1970) {
+  if(entrepreneur.year >= 1970 && entrepreneur.year < 1980) {
       console.log (`Nom : ${entrepreneur.first} ${entrepreneur.last}, Année de naissance : ${entrepreneur.year}`)
   }
 });
@@ -51,9 +51,21 @@ console.log("* ".repeat(35))
 // Question 2: 
 console.log("Q2: Sors une array qui contient le prénom et le nom des entrepreneurs");
 
-entrepreneurs.forEach( entrepreneur => {
-  console.log (`Nom : ${entrepreneur.first} ${entrepreneur.last}`);
-});
+
+function selectNames(array) {
+  let new_array = [];
+
+  entrepreneurs.forEach( entrepreneur => {
+    a = entrepreneur.first;
+    b = entrepreneur.last;
+  new_array.push(`Nom : ${a} ${b}`);
+  });
+  return new_array;
+}
+
+console.log(selectNames(entrepreneurs));
+
+
 
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
